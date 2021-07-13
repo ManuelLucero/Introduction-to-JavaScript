@@ -136,11 +136,26 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.random();
+if(computer <= .33){
+  computer = 'rock';
+}else if(.34 <= computer <= .66){
+  computer = 'paper';
+}else{
+  computer = 'scissors';
 }
 
+function game(user, computer){
+  if(user === 'rock' && computer !== 'paper' && user !== computer || user === 'paper' && computer !== 'scissors' && user !== computer || user === 'scissors' && computer !== 'rock' && user !== computer){
+    return "you win!";
+  }else if(computer === user){
+    return `it's a tie!`;
+  }else{
+    return 'you lose!';
+  }
+}
 
+console.log('task 4', game('rock',computer))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -183,10 +198,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for (let i = number; i > 0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i-1} bottles of soda on the wall`;
+      }
 }
 
+console.log('task 6', annoyingSong(99));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
