@@ -19,7 +19,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18;
+let age = 23;
+if(age >= votingAge){
+  console.log(true);
+}
 
 
 /*
@@ -32,9 +36,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let xSample = 1;
+let ySample = 2;
+if(xSample < ySample){
+  xSample = ySample*2;
+}
+console.log(xSample);
 
 
 /*
@@ -48,8 +55,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let strSample = "1999";
+strSample = Number(strSample);
+console.log(strSample);
 
 /*
 Task 1d - Multiply
@@ -60,11 +68,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  console.log(a * b)
+  return a * b;
 }
 
-
+multiply(3.5,2);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -149,7 +158,7 @@ function game(user, computer){
   if(user === 'rock' && computer !== 'paper' && user !== computer || user === 'paper' && computer !== 'scissors' && user !== computer || user === 'scissors' && computer !== 'rock' && user !== computer){
     return "you win!";
   }else if(computer === user){
-    return `it's a tie!`;
+    return `it's a tie`;
   }else{
     return 'you lose!';
   }
@@ -240,11 +249,18 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str) {
+  let count = 0;
+  for (var i = 0; i < str.length; i++) {
+    let letter = str[i].toLowerCase();
+    if(letter.includes('a') || letter.includes('e') || letter.includes('i') || letter.includes('o') || letter.includes('u')){
+      count++;
+    }
+  }
+  return count;
 }
 
-
+console.log(`stretch`, vowelCounter("Isoceles Triangle"));
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
