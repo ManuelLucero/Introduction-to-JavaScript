@@ -195,12 +195,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km*0.621371;
 }
 
-
-
+console.log('task 5a', miles(7));
 //Task 5b - Feet to CM
 /*
 Using the feet function below do the following:
@@ -209,11 +208,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
-
+console.log('task 5b', feet(7));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -248,9 +247,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if(90 <= score && score < 100){
+    return 'you got an A';
+  }else if(80 <= score && score < 90){
+    return 'you got a B';
+  }else if(70 <= score && score < 80){
+    return 'you got a C';
+  }else if(60 <= score && score < 70){
+    return 'you got a D';
+  }else if(score < 60){
+    return 'you got an F';
+  }
 }
+
+console.log('task 7', grade(91));
 
 
 
